@@ -7,11 +7,11 @@ module.exports = function (dir) {
 			if (err) {
 				return reject(new Error(err))
 			}
-			resolve(files.length > 0)
+			resolve(files.length === 0)
 		})
 	})
 }
 
 module.exports.sync = function (dir) {
-	return fs.readdirSync(dir).length > 0
+	return fs.readdirSync(dir).length === 0
 }

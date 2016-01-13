@@ -5,13 +5,13 @@ import pathEmpty from './'
 const fp = tmp.dirSync()
 
 test('sync works', t => {
-	t.false(pathEmpty.sync(fp.name))
+	t.true(pathEmpty.sync(fp.name))
 })
 
 test('async works', async t => {
 	t.plan(1)
 	const empty = await pathEmpty(fp.name)
-	t.false(empty)
+	t.true(empty)
 })
 
 test('sync throws', t => {
