@@ -17,12 +17,12 @@ const pathEmpty = require('path-empty')
 pathEmpty('./inori')
 	.then(empty => {
 		console.log(empty)
-		// => false
+		// => false, the path is not empty
 	})
 
 // sync mode
 pathEmpty.sync('./inori')
-// => false
+// => false, the path is not empty
 ```
 
 ## License
